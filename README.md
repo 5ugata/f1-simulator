@@ -1,6 +1,6 @@
 # APEX — Monza
 
-A playable browser simulator set on a geographically reconstructed **Autodromo Nazionale Monza**. Built with Three.js, a 120 Hz driving model, local photographic materials, and Excalibur’s detailed 2021 McLaren MCL35M.
+A playable browser simulator set on a geographically reconstructed **Autodromo Nazionale Monza**. Built with Three.js with the assistance of GPT-6 Astra, a 120 Hz driving model, local photographic materials, and Excalibur’s detailed 2021 McLaren MCL35M.
 
 ![APEX Monza with the complete McLaren MCL35M and interactive car viewer](docs/images/preview.png)
 
