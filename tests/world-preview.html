@@ -1,0 +1,17 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Monza environment inspection</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden}canvas{display:block;width:100%;height:100%}</style></head><body><canvas></canvas><script type="module">
+import * as THREE from 'three';
+import {createRendering} from '../src/rendering.js';
+import {createTrack} from '../src/track.js';
+import {createWorld} from '../src/world.js';
+const view = await createRendering(document.querySelector('canvas'),{quality:'high',weather:'golden'});
+const track = await createTrack(); const world = await createWorld(view.worldRoot,track);
+const p = new URLSearchParams(location.search); const d = Number(p.get('distance') || -50);
+const s = track.sample(d), mode=p.get('mode')||'driver';
+const target = mode === 'aerial' ? s.position.clone() : track.sample(d+100).position.clone().add(new THREE.Vector3(0,1.3,0));
+if(mode==='aerial') view.camera.position.copy(s.position).addScaledVector(s.right,110).add(new THREE.Vector3(0,130,0));
+else view.camera.position.copy(s.position).add(new THREE.Vector3(0,1.1,0));
+view.camera.position.z *= -1; target.z *= -1; view.camera.lookAt(target);
+view.updateLighting(s.position);
+window.view=view;window.track=track;window.world=world;
+world.update(1/60,0);view.render(0);window.ready=true;
+</script></body></html>

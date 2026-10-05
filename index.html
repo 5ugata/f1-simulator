@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#101414" />
+  <meta name="description" content="APEX — a Monza open-wheel driving simulator. A real geographic circuit, responsive vehicle dynamics, and the pursuit of a perfect lap." />
+  <title>APEX — Monza Driving Simulator</title>
+  <link rel="icon" href="%BASE_URL%favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/fonts/fonts.css" />
+</head>
+<body>
+  <canvas id="world" aria-label="Interactive 3D Monza circuit"></canvas>
+  <div id="vignette"></div>
+  <div id="loading" role="status">
+    <div class="loading-mark">A<span> / </span>PEX</div>
+    <p>THE PURSUIT OF A PERFECT LAP</p>
+    <div class="load-track"><i id="load-progress"></i></div>
+    <span id="load-label">PREPARING THE CIRCUIT</span>
+  </div>
+  <main id="lobby" class="hidden">
+    <div id="car-viewer" role="region" tabindex="0" aria-label="McLaren 3D car viewer" aria-describedby="car-viewer-instructions car-viewer-keyboard"></div>
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="APEX home"><svg viewBox="0 0 40 30" aria-hidden="true"><path d="M0 28 17 2h8L9 28zm17 0L29 9l11 19H29l-5-8-5 8z" fill="currentColor"/></svg><span>APEX</span><small>MOTORSPORT<br>SIMULATION</small></a>
+      <nav aria-label="Main navigation"><button class="nav-link active" data-action="drive">DRIVE</button><button class="nav-link" data-action="telemetry">TELEMETRY</button><button class="nav-link" data-action="circuit">THE CIRCUIT</button></nav>
+      <div class="top-status"><span class="status-dot"></span> SYSTEM READY <button class="icon-button" data-action="settings" aria-label="Settings">⚙</button></div>
+    </header>
+    <div class="hero-copy">
+      <div class="eyebrow"><span class="italy-flag"></span> ITALIA <span class="slash">/</span> CIRCUIT 01</div>
+      <h1>MONZA<span>THE TEMPLE OF SPEED.</span></h1>
+      <p>One circuit. A thousandth of a second.<br>Find your limit in the heart of Italian motorsport.</p>
+      <div class="track-stats"><div><strong>5.793<span>KM</span></strong><small>CIRCUIT LENGTH</small></div><div><strong>11</strong><small>CORNERS</small></div><div><strong>1922</strong><small>RACING SINCE</small></div></div>
+      <div class="hero-actions"><button class="text-button" data-action="circuit">EXPLORE THE CIRCUIT <span>↗</span></button><button class="text-button" data-action="demo">WATCH A LAP <span>▷</span></button></div>
+    </div>
+    <aside class="circuit-peek">
+      <div class="eyebrow"><span class="status-dot"></span> GRAND PRIX LAYOUT</div>
+      <svg id="lobby-map" viewBox="0 0 300 220" aria-label="Monza track layout"></svg>
+      <div class="map-caption"><span>AUTODROMO NAZIONALE</span><strong>45°37′ N &nbsp; 9°17′ E</strong></div>
+    </aside>
+    <div class="car-viewer-ui">
+      <div class="car-tag"><i></i><span>McLAREN MCL35M <small>2021 / MODEL BY EXCALIBUR</small></span></div>
+      <div class="car-viewer-controls">
+        <p id="car-viewer-instructions"><span class="viewer-mouse-hint">Drag to rotate<br>Scroll to zoom</span><span class="viewer-touch-hint">Drag to rotate<br>Pinch to zoom</span></p>
+        <div class="car-viewer-buttons" role="group" aria-label="Car view controls">
+          <button id="car-zoom-out" aria-label="Zoom out" title="Zoom out">−</button>
+          <button id="car-zoom-in" aria-label="Zoom in" title="Zoom in">+</button>
+          <button id="car-view-reset" aria-label="Reset car view" title="Reset car view"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10a8 8 0 1 1 1 7M4 4v6h6"/></svg></button>
+        </div>
+      </div>
+      <span id="car-viewer-keyboard" class="sr-only">Arrow keys rotate. Plus and minus zoom. Home resets the view.</span>
+    </div>
+    <footer class="launch-bar">
+      <button class="launch-option" data-action="session"><span>01 <small>SESSION</small></span><strong id="session-label">Time attack <b>⌄</b></strong></button>
+      <button class="launch-option" data-action="conditions"><span>02 <small>CONDITIONS</small></span><strong id="conditions-label">Golden hour <b>☀</b></strong></button>
+      <button class="launch-option" data-action="setup"><span>03 <small>DRIVER SETUP</small></span><strong id="setup-label">Assisted <b>⌄</b></strong></button>
+      <button class="launch-cta" id="start-button"><span>ENTER COCKPIT<small>THE TRACK IS YOURS.</small></span><b>↗</b></button>
+    </footer>
+    <div class="lobby-bottom"><span><span class="status-dot"></span> LIVE 3D ENVIRONMENT</span><button class="text-button" data-action="controls">CONTROLS <kbd>?</kbd></button><span>BUILT FOR THE PURSUIT.</span></div>
+  </main>
+  <section id="hud" class="hidden" aria-label="Driving instruments">
+    <div class="hud-top"><div class="hud-brand">APEX<span>MONZA / <b id="hud-session">TIME ATTACK</b></span></div><div class="session-clock"><span class="status-dot"></span><span id="session-status">PRACTICE</span><button id="demo-control" class="hud-button hidden" data-action="takeover">TAKE CONTROL ↗</button></div><button id="pause-button" class="hud-button" aria-label="Pause">Ⅱ <span>ESC</span></button></div>
+    <div class="timing-tower"><div class="timing-heading"><span>PERSONAL TIMING</span><span id="lap-number">LAP 01</span></div><div class="current-lap"><span>CURRENT</span><strong id="lap-time">0:00.000</strong></div><div class="timing-row"><span>BEST</span><strong id="best-time">—:——.———</strong></div><div class="timing-row"><span>LAST</span><strong id="last-time">—:——.———</strong></div><div class="sector-strip"><i id="sector-0">S1</i><i id="sector-1">S2</i><i id="sector-2">S3</i></div><div id="delta" class="delta">FIRST LAP · SET A BENCHMARK</div></div>
+    <div class="hud-map"><svg id="drive-map" viewBox="0 0 300 220" aria-label="Live track position"></svg><span id="corner-name">RETTILINEO PRINCIPALE</span></div>
+    <div id="notice" class="notice hidden" role="status"></div>
+    <div id="countdown" class="countdown hidden" role="status" aria-live="polite" aria-label="Wait for lights out">
+      <span class="start-caption">MONZA / STARTING SIGNAL</span>
+      <div id="start-lamps" aria-hidden="true"><i><b></b><b></b></i><i><b></b><b></b></i><i><b></b><b></b></i><i><b></b><b></b></i><i><b></b><b></b></i></div>
+      <span id="start-state">WAIT FOR LIGHTS OUT</span>
+    </div>
+    <div id="corner-guide" class="corner-guide"><span id="corner-distance">800 M</span><strong id="next-corner">RETTIFILO</strong><small id="guide-speed">BRAKE IN A STRAIGHT LINE</small></div>
+    <div class="telemetry-mini"><div class="tyre-widget"><span>TYRES / SOFT</span><div class="tyre-pairs"><i id="tyre-fl">FL</i><i id="tyre-fr">FR</i><i id="tyre-rl">RL</i><i id="tyre-rr">RR</i></div><strong id="tyre-temp">80°<small>C</small></strong></div><div class="fuel-widget"><span>FUEL</span><strong id="fuel">30.0<small>KG</small></strong><span id="damage">CAR HEALTH 100%</span></div></div>
+    <div class="dash"><div class="rev-lights" id="rev-lights"></div><div class="dash-main"><div class="input-bars"><div><i id="brake-bar"></i></div><div><i id="throttle-bar"></i></div><small>B &nbsp; T</small></div><div class="gear"><strong id="gear">1</strong><span>GEAR</span></div><div class="speed"><strong id="speed">0</strong><span>KM/H <b id="rpm">4,000 RPM</b></span></div><div class="deployment"><button id="drs-status" data-touch="drs" aria-label="Hold to activate DRS">DRS <b>E</b></button><button id="ers-status" data-touch="boost" aria-label="Hold for ERS boost">ERS <b>SHIFT</b></button><div class="ers-track"><i id="ers-bar"></i></div><small id="ers-percent">100%</small></div></div><div class="dash-bottom"><span id="assist-indicator">TRACTION ASSIST</span><button id="camera-label" data-action="camera" aria-label="Change driving camera">COCKPIT <kbd>C</kbd></button><span id="gear-mode">AUTO</span></div></div>
+    <div class="drive-shortcuts"><span><kbd>W A S D</kbd> DRIVE</span><span><kbd>R</kbd> RECOVER</span><span><kbd>L</kbd> RACING LINE</span><span><kbd>?</kbd> CONTROLS</span></div>
+    <div id="performance">60 FPS</div>
+    <div id="touch-controls"><div class="touch-steering"><button data-touch="left" aria-label="Steer left">◀</button><button data-touch="right" aria-label="Steer right">▶</button><div class="touch-shifts"><button data-touch="gearUp" aria-label="Shift up">+</button><button data-touch="gearDown" aria-label="Shift down">−</button></div></div><div class="touch-pedals"><button data-touch="brake">BRAKE</button><button data-touch="throttle">THROTTLE</button></div></div>
+  </section>
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-panel"><div class="modal-top"><span id="modal-eyebrow">APEX / PADDOCK</span><button class="icon-button" id="close-modal" aria-label="Close dialog">✕</button></div><h2 id="modal-title">Driver setup</h2><div id="modal-content"></div></div></div>
+  <div id="fatal" class="fatal hidden" role="alert"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

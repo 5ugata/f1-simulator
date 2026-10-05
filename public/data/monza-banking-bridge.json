@@ -1,0 +1,33 @@
+{
+  "name": "Monza north banking crossing over Serraglio",
+  "copyright": "© OpenStreetMap contributors",
+  "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "https://www.openstreetmap.org/copyright",
+  "accessed": "2026-09-29",
+  "sources": [
+    {
+      "way": 34404729,
+      "version": 9,
+      "role": "historic elevated raceway centerline",
+      "url": "https://api.openstreetmap.org/api/0.6/way/34404729/full.json",
+      "local": "monza-osm-way-34404729.json"
+    },
+    {
+      "way": 1443867793,
+      "version": 1,
+      "role": "covered Grand Prix raceway centerline",
+      "url": "https://api.openstreetmap.org/api/0.6/way/1443867793/full.json",
+      "local": "monza-osm-way-1443867793.json"
+    }
+  ],
+  "crossing": {
+    "coordinates": [
+      9.28925123576542,
+      45.62477038399728
+    ],
+    "coordinateOrder": "longitude, latitude",
+    "bearingDegrees": 139.76222313122355
+  },
+  "derivation": "Intersect the two source way segments in the simulator equirectangular projection at 45.618975 N, 9.281223 E. Bearing is clockwise from north along OSM way 34404729, node 395134535 to node 395134536. Uniform circuit-length scaling does not change the geographic intersection or bearing.",
+  "accuracy": "Community map centerlines, not surveyed bridge coordinates. No elevation, dimensions, bank angle or structural geometry is supplied by these ways; the rendered mesh remains authored."
+}

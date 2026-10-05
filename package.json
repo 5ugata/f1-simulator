@@ -1,0 +1,31 @@
+{
+  "name": "monza-apex-simulator",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "A geographically grounded Monza open-wheel driving simulator.",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "start": "vite --host 0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "node --test tests/*.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:controls": "node tests/controls-browser.mjs",
+    "test:viewer": "node tests/viewer-browser.mjs",
+    "test:track": "node tests/track-browser.mjs",
+    "test:performance": "node tests/performance.mjs",
+    "check:dist": "node scripts/check-dist.mjs",
+    "test:deployment": "node tests/deployment-browser.mjs"
+  },
+  "dependencies": {
+    "three": "^0.180.0"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7",
+    "playwright": "^1.58.2"
+  },
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  }
+}

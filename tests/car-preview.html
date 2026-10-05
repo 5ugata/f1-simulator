@@ -1,0 +1,26 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="icon" href="/favicon.svg"><title>APEX car visual inspection</title><style>html,body{margin:0;width:100%;height:100%;overflow:hidden}canvas{display:block;width:100%;height:100%}</style></head><body><canvas id="canvas"></canvas><script type="module">
+import * as THREE from 'three';
+import {createRendering} from '../src/rendering.js';
+import {createCar} from '../src/car.js';
+import {EngineAudio} from '../src/audio.js';
+const view = await createRendering(document.querySelector('canvas'),{quality:'high',weather:'golden'});
+const car = createCar({mirrored:true}); const worldRoot=new THREE.Group();worldRoot.scale.z=-1;view.scene.add(worldRoot);worldRoot.add(car.group);
+const floor = new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:0x464747,roughness:.96}));
+floor.rotation.x=-Math.PI/2; floor.position.y=-.005; floor.receiveShadow=true; view.scene.add(floor);
+view.sun.shadow.camera.left=-7;view.sun.shadow.camera.right=7;view.sun.shadow.camera.top=7;view.sun.shadow.camera.bottom=-7;
+view.updateLighting(new THREE.Vector3());
+const params=new URLSearchParams(location.search);
+const mode=params.get('camera')||'front';
+function setCamera(mode){
+car.setCockpit(mode==='cockpit');view.camera.fov=mode==='cockpit'?74:48;
+if(mode==='cockpit'){const p=car.cockpit.position.clone(),t=car.cockpit.target.clone();p.z*=-1;t.z*=-1;view.camera.position.copy(p);view.camera.lookAt(t);}
+else if(mode==='rear'){view.camera.position.set(4.9,2.2,5.8);view.camera.lookAt(0,.43,0);}
+else if(mode==='side'){view.camera.position.set(7,1.6,-1.3);view.camera.lookAt(0,.43,0);}
+else{view.camera.position.set(4.6,2.2,-5.4);view.camera.lookAt(0,.43,0);}
+view.camera.updateProjectionMatrix();}
+setCamera(mode);window.setCamera=setCamera;
+let t=0;const state={speed:0,rpm:11200,gear:5,throttle:.6};
+function tick(time){t=time*.001;car.update(state,1/60);view.render(t);requestAnimationFrame(tick);}requestAnimationFrame(tick);
+window.car=car;window.view=view;window.state=state;window.ready=true;
+window.engine=new EngineAudio();document.body.addEventListener('click',()=>window.engine.start());
+</script></body></html>

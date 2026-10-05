@@ -1,0 +1,945 @@
+{
+  "schemaVersion": 1,
+  "name": "Monza paddock and circuit service-building footprints",
+  "copyright": "\u00a9 OpenStreetMap contributors",
+  "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "attribution": "https://www.openstreetmap.org/copyright",
+  "accessed": "2026-10-03",
+  "source": {
+    "url": "https://api.openstreetmap.org/api/0.6/map.json?bbox=9.279,45.613,9.286,45.622",
+    "local": "monza-osm-paddock.json",
+    "boundingBox": [
+      9.279,
+      45.613,
+      9.286,
+      45.622
+    ]
+  },
+  "coordinateOrder": "longitude, latitude",
+  "derivation": "Selected closed building-way node coordinates and two named tower-point coordinates copied exactly from the source API extract. Positions/footprints are mapped; dimensions perpendicular to the ground, roof forms, materials and facade details are authored. The two towers use authored footprint dimensions around their mapped points. Simulation uses the circuit equirectangular projection and its small uniform length scale. The rendered:false pit-complex features are consumed by the separate pit reconstruction, not by the general landmarks builder.",
+  "accuracy": "Community-map footprints, not a building survey. Source objects range in age; event installations and 2026-27 construction are not asserted current.",
+  "features": [
+    {
+      "id": "osm-way-34404652",
+      "osm": {
+        "type": "way",
+        "id": 34404652,
+        "version": 7,
+        "timestamp": "2014-09-05T14:36:29Z",
+        "url": "https://www.openstreetmap.org/way/34404652"
+      },
+      "name": "Palazzina Box",
+      "role": "pit-garages",
+      "renderer": "pit-complex",
+      "rendered": false,
+      "footprint": [
+        [
+          9.2811218,
+          45.6162522
+        ],
+        [
+          9.2814448,
+          45.6162279
+        ],
+        [
+          9.2817564,
+          45.618286
+        ],
+        [
+          9.2814375,
+          45.6183106
+        ],
+        [
+          9.2811574,
+          45.6164842
+        ],
+        [
+          9.2811218,
+          45.6162522
+        ]
+      ],
+      "height": 8.4,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "commercial",
+        "name": "Palazzina Box"
+      }
+    },
+    {
+      "id": "osm-way-193647797",
+      "osm": {
+        "type": "way",
+        "id": 193647797,
+        "version": 3,
+        "timestamp": "2014-05-29T11:43:56Z",
+        "url": "https://www.openstreetmap.org/way/193647797"
+      },
+      "name": "Vecchie rimesse",
+      "role": "historic-garages",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2820899,
+          45.619462
+        ],
+        [
+          9.2829197,
+          45.6194046
+        ],
+        [
+          9.282904,
+          45.6192932
+        ],
+        [
+          9.2820742,
+          45.6193506
+        ],
+        [
+          9.2820899,
+          45.619462
+        ]
+      ],
+      "height": 4.5,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "service",
+        "name": "Vecchie rimesse"
+      }
+    },
+    {
+      "id": "osm-way-193647798",
+      "osm": {
+        "type": "way",
+        "id": 193647798,
+        "version": 3,
+        "timestamp": "2014-05-23T15:25:27Z",
+        "url": "https://www.openstreetmap.org/way/193647798"
+      },
+      "name": "Padiglione Esposizioni",
+      "role": "exhibition-hall",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2837111,
+          45.6191099
+        ],
+        [
+          9.2839578,
+          45.6193473
+        ],
+        [
+          9.2841456,
+          45.6190798
+        ],
+        [
+          9.2839035,
+          45.6188402
+        ],
+        [
+          9.2837111,
+          45.6191099
+        ]
+      ],
+      "height": 6.2,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "public",
+        "name": "Padiglione Esposizioni"
+      }
+    },
+    {
+      "id": "osm-way-193647799",
+      "osm": {
+        "type": "way",
+        "id": 193647799,
+        "version": 2,
+        "timestamp": "2014-05-29T11:44:02Z",
+        "url": "https://www.openstreetmap.org/way/193647799"
+      },
+      "name": "Paddock Commercial",
+      "role": "paddock-commercial",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.283251,
+          45.6186666
+        ],
+        [
+          9.2839065,
+          45.6186102
+        ],
+        [
+          9.2838245,
+          45.6181445
+        ],
+        [
+          9.283169,
+          45.6182009
+        ],
+        [
+          9.283251,
+          45.6186666
+        ]
+      ],
+      "height": 4.2,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "commercial"
+      }
+    },
+    {
+      "id": "osm-way-193647800",
+      "osm": {
+        "type": "way",
+        "id": 193647800,
+        "version": 1,
+        "timestamp": "2012-11-30T10:34:09Z",
+        "url": "https://www.openstreetmap.org/way/193647800"
+      },
+      "name": "Paddock Workshops",
+      "role": "paddock-workshops",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2819534,
+          45.6190249
+        ],
+        [
+          9.2819624,
+          45.6190863
+        ],
+        [
+          9.2828878,
+          45.6190195
+        ],
+        [
+          9.2828788,
+          45.618958
+        ],
+        [
+          9.2819534,
+          45.6190249
+        ]
+      ],
+      "height": 3.6,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194458105",
+      "osm": {
+        "type": "way",
+        "id": 194458105,
+        "version": 5,
+        "timestamp": "2014-09-05T14:36:25Z",
+        "url": "https://www.openstreetmap.org/way/194458105"
+      },
+      "name": "Hospitality Building",
+      "role": "hospitality",
+      "renderer": "pit-complex",
+      "rendered": false,
+      "footprint": [
+        [
+          9.2815066,
+          45.6192446
+        ],
+        [
+          9.2816232,
+          45.6192369
+        ],
+        [
+          9.2818802,
+          45.6192199
+        ],
+        [
+          9.2817713,
+          45.6184112
+        ],
+        [
+          9.2813976,
+          45.6184359
+        ],
+        [
+          9.2815066,
+          45.6192446
+        ]
+      ],
+      "height": 10.4,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "commercial",
+        "name": "Hospitality Building"
+      }
+    },
+    {
+      "id": "osm-way-194458106",
+      "osm": {
+        "type": "way",
+        "id": 194458106,
+        "version": 3,
+        "timestamp": "2022-06-07T08:31:27Z",
+        "url": "https://www.openstreetmap.org/way/194458106"
+      },
+      "name": "Pit Service Canopy",
+      "role": "pit-service-canopy",
+      "renderer": "pit-complex",
+      "rendered": false,
+      "footprint": [
+        [
+          9.2811211,
+          45.6159335
+        ],
+        [
+          9.2813243,
+          45.6159218
+        ],
+        [
+          9.2813113,
+          45.6158111
+        ],
+        [
+          9.2811081,
+          45.6158228
+        ],
+        [
+          9.2811211,
+          45.6159335
+        ]
+      ],
+      "height": 4.0,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "roof",
+        "layer": "1"
+      }
+    },
+    {
+      "id": "osm-way-194458108",
+      "osm": {
+        "type": "way",
+        "id": 194458108,
+        "version": 4,
+        "timestamp": "2014-01-05T17:11:44Z",
+        "url": "https://www.openstreetmap.org/way/194458108"
+      },
+      "name": "Centro Medico",
+      "role": "medical-centre",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2814604,
+          45.6160419
+        ],
+        [
+          9.2819463,
+          45.6160258
+        ],
+        [
+          9.2819395,
+          45.6159248
+        ],
+        [
+          9.2816532,
+          45.6159343
+        ],
+        [
+          9.2816508,
+          45.6158991
+        ],
+        [
+          9.2815906,
+          45.6159011
+        ],
+        [
+          9.2814512,
+          45.6159057
+        ],
+        [
+          9.2814604,
+          45.6160419
+        ]
+      ],
+      "height": 3.8,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "amenity": "hospital",
+        "building": "hospital",
+        "name": "Centro Medico"
+      }
+    },
+    {
+      "id": "osm-way-194739930",
+      "osm": {
+        "type": "way",
+        "id": 194739930,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739930"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2819385,
+          45.6187734
+        ],
+        [
+          9.2821974,
+          45.6187591
+        ],
+        [
+          9.2821922,
+          45.6187135
+        ],
+        [
+          9.2819333,
+          45.6187279
+        ],
+        [
+          9.2819385,
+          45.6187734
+        ]
+      ],
+      "height": 3.0,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194739931",
+      "osm": {
+        "type": "way",
+        "id": 194739931,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739931"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2820618,
+          45.618956
+        ],
+        [
+          9.2822303,
+          45.6189445
+        ],
+        [
+          9.2822233,
+          45.6188944
+        ],
+        [
+          9.2820548,
+          45.6189059
+        ],
+        [
+          9.2820618,
+          45.618956
+        ]
+      ],
+      "height": 3.2,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194739932",
+      "osm": {
+        "type": "way",
+        "id": 194739932,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739932"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2824322,
+          45.6187754
+        ],
+        [
+          9.2825482,
+          45.618768
+        ],
+        [
+          9.2825308,
+          45.6186339
+        ],
+        [
+          9.2824147,
+          45.6186413
+        ],
+        [
+          9.2824322,
+          45.6187754
+        ]
+      ],
+      "height": 3.4,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194739933",
+      "osm": {
+        "type": "way",
+        "id": 194739933,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739933"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2822303,
+          45.6187605
+        ],
+        [
+          9.2823597,
+          45.6187533
+        ],
+        [
+          9.2823545,
+          45.6187069
+        ],
+        [
+          9.282225,
+          45.6187141
+        ],
+        [
+          9.2822303,
+          45.6187605
+        ]
+      ],
+      "height": 3.0,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194739934",
+      "osm": {
+        "type": "way",
+        "id": 194739934,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739934"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2833185,
+          45.6199115
+        ],
+        [
+          9.2835248,
+          45.6198932
+        ],
+        [
+          9.2835088,
+          45.619805
+        ],
+        [
+          9.2833025,
+          45.6198233
+        ],
+        [
+          9.2833185,
+          45.6199115
+        ]
+      ],
+      "height": 3.2,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194739935",
+      "osm": {
+        "type": "way",
+        "id": 194739935,
+        "version": 1,
+        "timestamp": "2012-12-06T08:57:30Z",
+        "url": "https://www.openstreetmap.org/way/194739935"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2831856,
+          45.6193725
+        ],
+        [
+          9.2835795,
+          45.6193409
+        ],
+        [
+          9.2835654,
+          45.6192554
+        ],
+        [
+          9.2835089,
+          45.6192599
+        ],
+        [
+          9.2834941,
+          45.61917
+        ],
+        [
+          9.2833486,
+          45.6191817
+        ],
+        [
+          9.283364,
+          45.6192753
+        ],
+        [
+          9.2831721,
+          45.6192907
+        ],
+        [
+          9.2831856,
+          45.6193725
+        ]
+      ],
+      "height": 3.6,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-194751178",
+      "osm": {
+        "type": "way",
+        "id": 194751178,
+        "version": 1,
+        "timestamp": "2012-12-06T11:09:10Z",
+        "url": "https://www.openstreetmap.org/way/194751178"
+      },
+      "name": "Paddock Service",
+      "role": "paddock-service",
+      "renderer": "landmark",
+      "rendered": true,
+      "footprint": [
+        [
+          9.2818801,
+          45.6194331
+        ],
+        [
+          9.2819753,
+          45.6194257
+        ],
+        [
+          9.2819579,
+          45.6193163
+        ],
+        [
+          9.2818627,
+          45.6193237
+        ],
+        [
+          9.2818801,
+          45.6194331
+        ]
+      ],
+      "height": 3.2,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "building": "yes"
+      }
+    },
+    {
+      "id": "osm-way-219396377",
+      "osm": {
+        "type": "way",
+        "id": 219396377,
+        "version": 3,
+        "timestamp": "2014-02-01T15:48:49Z",
+        "url": "https://www.openstreetmap.org/way/219396377"
+      },
+      "name": "Podio",
+      "role": "podium",
+      "renderer": "pit-complex",
+      "rendered": false,
+      "footprint": [
+        [
+          9.2809383,
+          45.6165241
+        ],
+        [
+          9.2809309,
+          45.6165163
+        ],
+        [
+          9.2809261,
+          45.6165083
+        ],
+        [
+          9.2809234,
+          45.6165002
+        ],
+        [
+          9.2809227,
+          45.6164926
+        ],
+        [
+          9.2809233,
+          45.6164866
+        ],
+        [
+          9.2809268,
+          45.6164767
+        ],
+        [
+          9.2809315,
+          45.6164695
+        ],
+        [
+          9.2809383,
+          45.6164625
+        ],
+        [
+          9.2809466,
+          45.6164565
+        ],
+        [
+          9.2809574,
+          45.6164511
+        ],
+        [
+          9.2809717,
+          45.6164467
+        ],
+        [
+          9.2809892,
+          45.6164445
+        ],
+        [
+          9.2810032,
+          45.616445
+        ],
+        [
+          9.2810157,
+          45.6164472
+        ],
+        [
+          9.2810262,
+          45.6164505
+        ],
+        [
+          9.2810353,
+          45.6164547
+        ],
+        [
+          9.28104,
+          45.6164575
+        ],
+        [
+          9.2810442,
+          45.6164604
+        ],
+        [
+          9.2810498,
+          45.6164653
+        ],
+        [
+          9.2810529,
+          45.6164687
+        ],
+        [
+          9.2810566,
+          45.6164739
+        ],
+        [
+          9.2810583,
+          45.616477
+        ],
+        [
+          9.2810608,
+          45.6164831
+        ],
+        [
+          9.2810617,
+          45.6164881
+        ],
+        [
+          9.2810623,
+          45.6164918
+        ],
+        [
+          9.2810621,
+          45.616497
+        ],
+        [
+          9.2810612,
+          45.6165022
+        ],
+        [
+          9.2810594,
+          45.6165074
+        ],
+        [
+          9.2810575,
+          45.6165111
+        ],
+        [
+          9.2810541,
+          45.6165163
+        ],
+        [
+          9.2810496,
+          45.6165215
+        ],
+        [
+          9.2810456,
+          45.616525
+        ],
+        [
+          9.2810405,
+          45.6165288
+        ],
+        [
+          9.2810348,
+          45.6165322
+        ],
+        [
+          9.2810263,
+          45.616536
+        ],
+        [
+          9.2810182,
+          45.6165387
+        ],
+        [
+          9.2810104,
+          45.6165405
+        ],
+        [
+          9.2809954,
+          45.6165421
+        ],
+        [
+          9.2809841,
+          45.6165418
+        ],
+        [
+          9.2809755,
+          45.6165407
+        ],
+        [
+          9.2809646,
+          45.6165381
+        ],
+        [
+          9.2809584,
+          45.6165359
+        ],
+        [
+          9.2809524,
+          45.6165333
+        ],
+        [
+          9.2809468,
+          45.6165302
+        ],
+        [
+          9.2809383,
+          45.6165241
+        ]
+      ],
+      "height": 8.5,
+      "heightSource": "authored approximation; no OSM height tag",
+      "tags": {
+        "bridge": "yes",
+        "building": "tower",
+        "layer": "1",
+        "lit": "yes",
+        "name": "Podio",
+        "surface": "concrete"
+      }
+    },
+    {
+      "id": "osm-node-2396630508",
+      "osm": {
+        "type": "node",
+        "id": 2396630508,
+        "version": 1,
+        "timestamp": "2013-07-25T20:22:40Z",
+        "url": "https://www.openstreetmap.org/node/2396630508"
+      },
+      "name": "Torre Nord",
+      "role": "hospitality-tower",
+      "renderer": "landmark",
+      "rendered": true,
+      "point": [
+        9.2813278,
+        45.6214439
+      ],
+      "height": 16.8,
+      "width": 6.0,
+      "depth": 7.2,
+      "heightSource": "authored photo interpretation; OSM supplies a point only",
+      "tags": {
+        "man_made": "tower",
+        "name": "Torre Nord"
+      },
+      "appearanceReference": "https://www.monzanet.it/wp-content/uploads/2025/11/Brochure_Hospitality_GPf12026.pdf#page=14"
+    },
+    {
+      "id": "osm-node-2396630532",
+      "osm": {
+        "type": "node",
+        "id": 2396630532,
+        "version": 3,
+        "timestamp": "2025-06-24T08:09:51Z",
+        "url": "https://www.openstreetmap.org/node/2396630532"
+      },
+      "name": "Torre Sud",
+      "role": "hospitality-tower",
+      "renderer": "landmark",
+      "rendered": true,
+      "point": [
+        9.2806411,
+        45.6161958
+      ],
+      "height": 16.8,
+      "width": 6.0,
+      "depth": 7.2,
+      "heightSource": "authored photo interpretation; OSM supplies a point only",
+      "tags": {
+        "man_made": "tower",
+        "name": "Torre Sud"
+      },
+      "appearanceReference": "https://www.monzanet.it/wp-content/uploads/2025/11/Brochure_Hospitality_GPf12026.pdf#page=14"
+    }
+  ]
+}

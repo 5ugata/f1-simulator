@@ -1,0 +1,120 @@
+{
+  "source": {
+    "uid": "967ecec37468412083c40c62b3d7234d",
+    "name": "F1 2021 McLaren MCL35M",
+    "author": "Excalibur",
+    "url": "https://sketchfab.com/3d-models/f1-2021-mclaren-mcl35m-967ecec37468412083c40c62b3d7234d",
+    "license": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "triangles": 102081,
+  "basis": {
+    "up": "+Y",
+    "front": "-Z",
+    "right": "+X"
+  },
+  "normalization": {
+    "scale": 0.9807431455255142,
+    "sourceOrigin": [
+      0.0000050067901611328125,
+      -0.563712000846863,
+      -0.8935511372983456
+    ],
+    "rotationYDegrees": 180
+  },
+  "bounds": {
+    "min": [
+      -1,
+      0,
+      -3.1946150276126764
+    ],
+    "max": [
+      1,
+      1.1694175289636144,
+      2.375613742088158
+    ]
+  },
+  "dimensions": {
+    "width": 2,
+    "length": 5.570228769700835,
+    "height": 1.1694175289636144,
+    "wheelbase": 3.625118418957415,
+    "frontAxle": 1.9938151304265785,
+    "rearAxle": -1.6313032885308367,
+    "wheelRadius": 0.3276138277566671,
+    "frontExtent": 3.1946150276126764,
+    "rearExtent": 2.375613742088158,
+    "frontTrack": 1.6170792141716233,
+    "rearTrack": 1.571499709235644,
+    "frontTyreWidth": 0.36841565460327796,
+    "rearTyreWidth": 0.4255679784149262
+  },
+  "wheels": [
+    {
+      "name": "wheelFR",
+      "front": true,
+      "side": 1,
+      "position": [
+        0.8083789822850034,
+        0.32710971417758605,
+        -1.9938881868708729
+      ],
+      "radius": 0.32710971417758583,
+      "width": 0.36841317018728875
+    },
+    {
+      "name": "wheelFL",
+      "front": true,
+      "side": -1,
+      "position": [
+        -0.8087002318866199,
+        0.32710971417758605,
+        -1.993742073982284
+      ],
+      "radius": 0.32710971417758583,
+      "width": 0.3684181390192672
+    },
+    {
+      "name": "wheelRR",
+      "front": false,
+      "side": 1,
+      "position": [
+        0.7868532129870537,
+        0.32815811945726814,
+        1.6313081989059686
+      ],
+      "radius": 0.3276138277566671,
+      "width": 0.4255680076433496
+    },
+    {
+      "name": "wheelRL",
+      "front": false,
+      "side": -1,
+      "position": [
+        -0.7846464962485903,
+        0.32815811945726814,
+        1.6312983781557053
+      ],
+      "radius": 0.3276138277566671,
+      "width": 0.42556794918650287
+    }
+  ],
+  "steering": {
+    "position": [
+      0.000004910375131615591,
+      0.5701110924146632,
+      -0.9478653388150072
+    ],
+    "axis": [
+      0,
+      0,
+      1
+    ]
+  },
+  "changes": [
+    "Uniform scale to 2 m total width; original proportions preserved",
+    "Rigid coordinate rotation and center-of-mass origin alignment",
+    "Wheel and steering triangles partitioned for runtime animation",
+    "Original material parameters, UVs and PNG files preserved; no decimation"
+  ]
+}
